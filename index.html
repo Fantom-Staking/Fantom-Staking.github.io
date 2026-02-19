@@ -3,12 +3,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
 
- <!-- SEO Meta Tags -->
+  <!-- SEO Meta Tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Fantom Staking — Rewards, Validators, Locking, Risks, Security & Troubleshooting (2026)</title>
-  <meta name="description" content="Fantom Staking guide (2026): how staking works on Fantom, validator selection, rewards logic, lock/unlock concepts, fees, delegation steps, security checklist, and troubleshooting. Includes KPIs, runbook, and a deep FAQ.">
+  <title>Fantom Staking — How to Stake FTM, Rewards, Validators, Locking, Risks & FAQ (2026)</title>
+  <meta name="description" content="Fantom Staking (2026): how to stake FTM step-by-step, choose validators, understand rewards and locking, manage gas and security, and fix common staking issues. Includes runbook, checklists, and a deep FAQ.">
   <meta name="author" content="Crypto Finance Experts">
   <link rel="canonical" href="https://fantom-staking.example.com/">
 
@@ -18,20 +18,19 @@
   <!-- Open Graph -->
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://fantom-staking.example.com/">
-  <meta property="og:title" content="Fantom Staking — Rewards, Validators, Security & Troubleshooting (2026)">
-  <meta property="og:description" content="Practical Fantom staking guide: choose validators, understand rewards and lock/unlock, stay secure, and fix common issues.">
+  <meta property="og:title" content="Fantom Staking — How to Stake FTM, Rewards, Validators & Security (2026)">
+  <meta property="og:description" content="Practical Fantom staking guide: how to stake FTM, pick validators, track rewards, and avoid common mistakes.">
   <meta property="og:image" content="Fantom-1.png">
 
   <!-- Twitter Card -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://fantom-staking.example.com/">
-  <meta property="twitter:title" content="Fantom Staking — Validators, Rewards, Security (2026)">
-  <meta property="twitter:description" content="Deep Fantom staking guide: delegation workflow, validator risk, rewards, unlock steps, and FAQs.">
+  <meta property="twitter:title" content="Fantom Staking — Stake FTM Step-by-Step (2026)">
+  <meta property="twitter:description" content="Deep Fantom staking guide: validator selection, rewards, locking, security, and troubleshooting.">
   <meta property="twitter:image" content="Fantom-1.png">
 
   <style>
     :root{
-      /* Fantom-inspired blue/white theme */
       --primary:#167DFF;
       --primary-600:#0F66D1;
       --primary-700:#0B4FA3;
@@ -45,10 +44,6 @@
       --panel:#FFFFFF;
       --panel-2:#F8FBFF;
       --line:rgba(7,16,33,.10);
-
-      --ok:#16A34A;
-      --warn:#F59E0B;
-      --error:#DC2626;
 
       --shadow: 0 18px 44px rgba(7,16,33,.12);
       --radius:14px;
@@ -144,7 +139,6 @@
       flex:0 0 auto;
     }
 
-    /* SINGLE CTA — centered, big, internal link only */
     .cta-center{
       display:flex;
       justify-content:center;
@@ -166,7 +160,6 @@
       box-shadow:
         0 18px 44px rgba(22,125,255,.22),
         0 0 0 6px rgba(22,125,255,.10);
-      transform: translateZ(0);
       transition: transform .18s ease, filter .18s ease, box-shadow .18s ease;
       text-decoration:none;
       min-width:min(560px, 100%);
@@ -199,17 +192,9 @@
       box-shadow:var(--shadow);
       background:rgba(255,255,255,.75);
     }
-    .hero-media::before{
-      content:"";
-      display:block;
-      padding-top:56.25%;
-    }
+    .hero-media::before{content:"";display:block;padding-top:56.25%}
     .hero-img{
-      position:absolute;
-      inset:0;
-      width:100%;
-      height:100%;
-      object-fit:cover;
+      position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
     }
 
     section.step-guide{padding: clamp(2rem,6vw,3.5rem) 0}
@@ -255,11 +240,7 @@
 
     table{width:100%; border-collapse:collapse; overflow:hidden; border-radius:12px}
     th,td{padding:.9rem; border-bottom:1px solid var(--line)}
-    th{
-      background:rgba(22,125,255,.08);
-      color:#0B1220;
-      text-align:left
-    }
+    th{background:rgba(22,125,255,.08); color:#0B1220; text-align:left}
     tr.highlight{background:rgba(22,125,255,.05)}
     tr:hover{background:rgba(7,16,33,.02)}
 
@@ -305,7 +286,6 @@
       align-items:center;
       justify-content:center;
       margin-top:14px;
-
       border-radius:var(--radius);
       border:1px solid var(--line);
       box-shadow:var(--shadow);
@@ -355,26 +335,26 @@
         <img class="brand-logo" src="fantom-ftm-logo.png" alt="Fantom logo">
         <div>
           <div class="muted" style="font-weight:950; letter-spacing:.2px;">Operational Guide</div>
-          <div class="muted-2" style="font-size:.95rem;">Validators • Rewards • Lock/Unlock • Security • Troubleshooting</div>
+          <div class="muted-2" style="font-size:.95rem;">How to Stake • Validators • Rewards • Locking • Security</div>
         </div>
       </div>
 
       <h1 id="fantom-staking">Fantom Staking</h1>
       <p class="lead">
-        This is a practical, security-first guide to <strong>Fantom staking</strong>:
-        how delegation works, how to pick validators, what can reduce real returns (fees, lock rules, operational mistakes),
-        and how to troubleshoot the classic issues (rewards not updating, unlock confusion, “staked but not visible” UI problems).
+        This guide focuses on one thing: <strong>how to stake FTM on Fantom</strong> without mistakes.
+        You’ll learn the real staking workflow (choose validator → delegate → track rewards → claim/restake → unstake),
+        what actually affects net returns, and how to verify everything on-chain when UIs lag.
       </p>
 
-      <!-- MAIN CTA: internal only (keyword/page anchor) -->
+      <!-- MAIN CTA: internal keyword anchor only -->
       <div class="cta-center">
-        <a href="#fantom-staking" class="cta" aria-label="Jump to Fantom Staking section">
-          Open Fantom Staking
+        <a href="#fantom-staking" class="cta" aria-label="Jump to Fantom Staking">
+          Fantom Staking
         </a>
       </div>
 
       <div class="note">
-        <strong>Quick rule:</strong> stake a small test amount first, verify validator details, then scale. Don’t chase yield at the cost of reliability.
+        <strong>Quick rule:</strong> stake a small test amount first. Validator reliability beats “headline APR”.
       </div>
     </div>
 
@@ -384,36 +364,36 @@
   </div>
 </header>
 
-<section class="step-guide" aria-labelledby="how-works">
+<section class="step-guide" aria-labelledby="how-to-stake">
   <div class="container">
-    <h2 id="how-works">Staking Workflow: Choose Validator → Delegate → Track Rewards → Claim/Restake → Unstake/Unlock</h2>
+    <h2 id="how-to-stake">How to Stake FTM on Fantom: Choose Validator → Delegate → Track Rewards → Claim/Restake</h2>
     <div class="steps" role="list">
       <article class="step" role="listitem">
         <div class="icon">①</div>
-        <h3>Choose a validator (reliability first)</h3>
+        <h3>Pick a validator (reliability first)</h3>
         <p>
-          Prefer proven uptime and reputation. Yield is meaningless if the validator is unstable or operationally risky.
+          Uptime, transparent fees, and reputation matter more than a slightly higher displayed APR.
         </p>
       </article>
       <article class="step" role="listitem">
         <div class="icon">②</div>
-        <h3>Delegate (stake) with a test amount</h3>
+        <h3>Delegate a small test amount</h3>
         <p>
-          Run a small stake to confirm the UI path, fee behavior, and reward tracking before allocating size.
+          Confirm the staking path works for your wallet and that your stake is visible on-chain.
         </p>
       </article>
       <article class="step" role="listitem">
         <div class="icon">③</div>
-        <h3>Track rewards + net outcomes</h3>
+        <h3>Track rewards and net outcomes</h3>
         <p>
-          Watch net rewards after fees, plus any lock/unlock constraints. Track on explorer when UI is delayed.
+          Rewards can update with delay. Track your address on explorer when UI is slow.
         </p>
       </article>
       <article class="step" role="listitem">
         <div class="icon">④</div>
-        <h3>Claim/restake and keep gas buffer</h3>
+        <h3>Claim or restake (keep FTM gas)</h3>
         <p>
-          Staking actions are transactions. Keep <strong>FTM</strong> for gas so you can claim, restake, or recover quickly.
+          Claims/restakes are transactions. Always keep a buffer of <strong>FTM</strong> for gas.
         </p>
       </article>
     </div>
@@ -425,49 +405,49 @@
   <section class="card toc" aria-label="Table of Contents">
     <strong>On this page (Fantom Staking):</strong>
     <ul>
-      <li><a href="#overview">Overview: what Fantom staking is</a></li>
-      <li><a href="#basics">Staking basics: delegation, rewards, lock/unlock</a></li>
-      <li><a href="#validators">Validator selection: what to evaluate</a></li>
-      <li><a href="#returns">Returns & risks: how real outcomes change</a></li>
-      <li><a href="#runbook">Step-by-step runbook: stake → track → claim → unstake</a></li>
-      <li><a href="#security">Security checklist: staking-safe habits</a></li>
-      <li><a href="#troubleshooting">Troubleshooting: common issues and fixes</a></li>
+      <li><a href="#overview">Fantom staking overview: what it is and what you earn</a></li>
+      <li><a href="#requirements">Before you stake: wallet, network, and gas requirements</a></li>
+      <li><a href="#validators">How to choose a Fantom validator (checklist)</a></li>
+      <li><a href="#rewards">Fantom staking rewards: what affects net APR</a></li>
+      <li><a href="#runbook">Step-by-step: stake, claim, restake, unstake</a></li>
+      <li><a href="#security">Staking security checklist (phishing + approvals)</a></li>
+      <li><a href="#troubleshooting">Troubleshooting: rewards not showing, unlock confusion</a></li>
       <li><a href="#sources">Authoritative sources & references</a></li>
-      <li><a href="#faq">FAQ (deep)</a></li>
+      <li><a href="#faq">Fantom Staking FAQ (deep)</a></li>
     </ul>
   </section>
 
   <section class="card" id="overview">
-    <h2>Fantom Staking Overview: What Staking Does (Operationally)</h2>
+    <h2>Fantom Staking Overview: What “Stake FTM” Means</h2>
     <p>
-      <strong>Fantom staking</strong> typically means delegating <strong>FTM</strong> to a validator to support network security and earn rewards.
-      Your real-world results depend on validator performance, fees, and your ability to safely manage transactions (claims, restakes, unstakes).
+      <strong>Fantom staking</strong> generally means delegating <strong>FTM</strong> to a validator to help secure the network and earn rewards.
+      Operationally, staking is a lifecycle of transactions: delegate → monitor rewards → claim/restake → unstake/unlock.
     </p>
 
     <div class="callout-grid" role="list">
       <div class="mini" role="listitem">
-        <h3>What staking is (in one line)</h3>
+        <h3>What you control</h3>
         <p class="muted">
-          You delegate FTM to a validator and earn rewards, with constraints (fees, lock rules, and operational steps).
+          Validator choice, how you manage gas, and whether you follow safe operational steps (test first, verify on-chain).
         </p>
         <div class="kpi-badges">
-          <span>Delegation</span><span>Validator uptime</span><span>Rewards</span>
+          <span>Validator selection</span><span>Gas planning</span><span>Verification</span>
         </div>
       </div>
 
       <div class="mini" role="listitem">
-        <h3>What can go wrong</h3>
+        <h3>What usually causes issues</h3>
         <p class="muted">
-          Wrong validator choice, lock/unlock confusion, UI mismatch, and phishing/approval risks from fake staking sites.
+          Choosing a risky validator, misunderstanding lock/unlock, and trusting UI over explorer.
         </p>
         <div class="kpi-badges">
-          <span>Lock rules</span><span>UI lag</span><span>Phishing</span>
+          <span>Locking</span><span>UI lag</span><span>Phishing</span>
         </div>
       </div>
     </div>
 
     <div class="note">
-      <strong>Explorer-first habit:</strong> if a wallet UI looks wrong, validate your address activity on the explorer before taking action.
+      <strong>Explorer-first:</strong> if the staking UI looks wrong, validate your address activity on the explorer before doing anything else.
     </div>
 
     <div class="content-media">
@@ -475,279 +455,240 @@
     </div>
   </section>
 
-  <section class="card" id="basics">
-    <h2>Staking Basics: Delegation, Rewards, and Lock/Unlock Concepts</h2>
+  <section class="card" id="requirements">
+    <h2>Before You Stake FTM: Wallet, Network, and Gas Requirements</h2>
     <p>
-      Staking is not just “click stake”. It’s a lifecycle: delegate → track rewards → claim/restake → unstake → unlock → withdraw.
-      Each step is a transaction that needs <strong>FTM gas</strong>.
+      The fastest way to get stuck is to begin staking without gas or on the wrong network.
+      Confirm these basics first.
     </p>
 
-    <table aria-label="Staking lifecycle table">
+    <table aria-label="Staking prerequisites">
       <thead>
         <tr>
-          <th>Step</th>
-          <th>What happens</th>
-          <th>Common mistake</th>
+          <th>Requirement</th>
+          <th>What you need</th>
+          <th>Why it matters</th>
         </tr>
       </thead>
       <tbody>
         <tr class="highlight">
-          <td>Delegate / Stake</td>
-          <td>You assign FTM to a validator</td>
-          <td>Choosing based on headline APR only</td>
+          <td>Correct network</td>
+          <td>Fantom Opera (Chain ID <span class="mono">250</span>)</td>
+          <td>Prevents wrong-chain actions</td>
         </tr>
         <tr>
-          <td>Track rewards</td>
-          <td>Rewards accrue per protocol rules</td>
-          <td>Assuming rewards update instantly in UI</td>
+          <td>Gas buffer</td>
+          <td>FTM reserved for multiple tx</td>
+          <td>Needed for delegate/claim/unstake</td>
         </tr>
         <tr>
-          <td>Claim / Restake</td>
-          <td>You realize rewards or compound them</td>
-          <td>Not having enough FTM gas to claim</td>
-        </tr>
-        <tr>
-          <td>Unstake / Unlock</td>
-          <td>You initiate exit and follow unlock rules</td>
-          <td>Misunderstanding lock/unlock timing</td>
+          <td>Verification tool</td>
+          <td>FTMScan</td>
+          <td>Source of truth if UI is delayed</td>
         </tr>
       </tbody>
     </table>
 
     <div class="note">
-      <strong>Rule:</strong> before staking size, read the lock/unlock steps like a checklist. Exits are where most users get confused.
+      <strong>Rule:</strong> never stake your last FTM. Keep enough to claim/restake/unstake and to fix mistakes.
     </div>
   </section>
 
   <section class="card" id="validators">
-    <h2>Validator Selection: What to Evaluate (Reliability Beats APR)</h2>
+    <h2>How to Choose a Fantom Validator: Reliability Checklist</h2>
     <p>
-      Validator quality is your biggest controllable variable. Use a reliability-first approach.
+      This is the part that matters. Use a checklist, not vibes.
     </p>
     <ul>
-      <li><strong>Uptime / performance:</strong> consistent validation matters more than “promo APR”.</li>
-      <li><strong>Fees / commission:</strong> understand how fees reduce net rewards.</li>
-      <li><strong>Reputation:</strong> prefer validators with transparent operations and community trust.</li>
-      <li><strong>Diversification:</strong> consider splitting stake across multiple reputable validators.</li>
+      <li><strong>Performance:</strong> consistent uptime and stable operation.</li>
+      <li><strong>Fees:</strong> transparent commission and predictable behavior.</li>
+      <li><strong>Reputation:</strong> known operator, clear identity, consistent history.</li>
+      <li><strong>Diversify:</strong> split stake across multiple reputable validators if staking size.</li>
     </ul>
 
     <div class="note">
-      <strong>Practical tip:</strong> if you can’t clearly explain why you trust a validator, don’t allocate size.
+      <strong>Reality:</strong> a slightly lower APR from a reliable validator can outperform a “top APR” validator that underperforms or causes delays.
     </div>
   </section>
 
-  <section class="card" id="returns">
-    <h2>Returns & Risks: What Changes Real Outcomes</h2>
+  <section class="card" id="rewards">
+    <h2>Fantom Staking Rewards: What Affects Net Returns</h2>
     <p>
-      Real staking outcomes are <strong>net</strong> outcomes. Fees, claim cadence, lock rules, and mistakes change what you actually earn.
+      Net returns are not the same as displayed APR. Fees and gas costs matter.
     </p>
 
-    <table aria-label="Returns and risks table">
+    <table aria-label="Rewards factors">
       <thead>
         <tr>
           <th>Factor</th>
-          <th>How it affects you</th>
+          <th>Impact</th>
           <th>What to do</th>
         </tr>
       </thead>
       <tbody>
         <tr class="highlight">
-          <td>Validator fees</td>
+          <td>Validator commission</td>
           <td>Reduces net rewards</td>
-          <td>Compare commission + reliability together</td>
+          <td>Compare fees + reliability together</td>
         </tr>
         <tr>
           <td>Claim cadence</td>
           <td>Too frequent claims waste gas</td>
-          <td>Batch claims; track gas costs</td>
+          <td>Batch claims and track costs</td>
         </tr>
         <tr>
           <td>Lock/unlock constraints</td>
           <td>Affects liquidity and exit timing</td>
-          <td>Plan exit before you need funds</td>
-        </tr>
-        <tr>
-          <td>Operational mistakes</td>
-          <td>Can cause delays or losses</td>
-          <td>Test first; verify on explorer</td>
+          <td>Plan exits before you need funds</td>
         </tr>
       </tbody>
     </table>
 
     <div class="note">
-      <strong>Never stake your last gas:</strong> always keep enough FTM for claims, restakes, and emergency exits.
+      <strong>Operational tip:</strong> if rewards appear “stuck”, check explorer activity first. UI updates can lag.
     </div>
   </section>
 
   <section class="card" id="runbook">
-    <h2>Runbook: Fantom Staking Step-by-Step (Operational)</h2>
+    <h2>Step-by-Step: How to Stake, Claim, Restake, and Unstake on Fantom</h2>
     <ol>
-      <li><strong>Verify domains:</strong> bookmark any staking UI you use; don’t click random ads.</li>
-      <li><strong>Confirm network:</strong> Fantom Opera (Chain ID <span class="mono">250</span>).</li>
-      <li><strong>Keep gas buffer:</strong> reserve FTM for multiple transactions.</li>
-      <li><strong>Choose validator:</strong> reliability + fee transparency.</li>
-      <li><strong>Stake small test:</strong> confirm it appears on explorer.</li>
-      <li><strong>Scale carefully:</strong> only after test is clean.</li>
-      <li><strong>Track net rewards:</strong> not just APR.</li>
-      <li><strong>Claim/restake deliberately:</strong> avoid over-claiming.</li>
-      <li><strong>Exit plan:</strong> read unlock steps before initiating unstake.</li>
+      <li><strong>Confirm network:</strong> Fantom Opera (Chain ID 250).</li>
+      <li><strong>Keep gas:</strong> reserve FTM for multiple actions.</li>
+      <li><strong>Select validator:</strong> reliability + transparent fees.</li>
+      <li><strong>Stake test amount:</strong> confirm on explorer.</li>
+      <li><strong>Scale slowly:</strong> only after the test is clean.</li>
+      <li><strong>Claim/restake:</strong> avoid over-claiming; don’t waste gas.</li>
+      <li><strong>Unstake/unlock:</strong> follow the exact steps; verify each tx on explorer.</li>
     </ol>
 
     <div class="note">
-      <strong>Golden habit:</strong> if UI conflicts with explorer, trust the explorer.
+      <strong>Don’t double-click life-cycle steps:</strong> if UI is slow, verify tx hash on explorer before repeating actions.
     </div>
   </section>
 
   <section class="card" id="security">
-    <h2>Security Checklist: Staking-Safe Habits</h2>
+    <h2>Staking Security Checklist: Avoid Phishing and Unsafe Approvals</h2>
     <ul>
-      <li><strong>Bookmark legit sites:</strong> avoid lookalike staking pages.</li>
-      <li><strong>Never share seed phrase:</strong> staking never requires it.</li>
-      <li><strong>Use minimal approvals:</strong> staking UIs should not require broad token allowances.</li>
-      <li><strong>Separate wallets:</strong> “vault” for holdings, “daily” for dApps.</li>
-      <li><strong>Revoke stale approvals:</strong> especially after using new dApps.</li>
-      <li><strong>Verify validator data:</strong> cross-check with explorer and reputable dashboards.</li>
+      <li><strong>Bookmark trusted pages:</strong> avoid lookalike “staking portals”.</li>
+      <li><strong>Seed phrase never:</strong> staking never requires it.</li>
+      <li><strong>Minimal approvals:</strong> don’t grant broad allowances to unknown contracts.</li>
+      <li><strong>Revoke stale allowances:</strong> especially after using new dApps.</li>
+      <li><strong>Separate wallets:</strong> holdings vs daily interactions.</li>
     </ul>
 
     <div class="note">
-      <strong>Most avoidable loss:</strong> phishing + approvals. Treat staking links as high-risk until verified.
+      <strong>Most avoidable loss:</strong> phishing + approvals. If a site pushes urgency, treat it as hostile.
     </div>
   </section>
 
   <section class="card" id="troubleshooting">
-    <h2>Fantom Staking Troubleshooting: Common Issues and Fixes</h2>
+    <h2>Troubleshooting Fantom Staking: Rewards Not Showing, Claim Fails, Unlock Confusion</h2>
 
-    <h3>“My stake/rewards don’t show in the wallet UI”</h3>
+    <h3>“My staking position or rewards don’t show”</h3>
     <ul>
-      <li>Confirm you’re on Fantom Opera and the correct wallet account.</li>
-      <li>Check your address on <span class="inline-code">ftmscan.com</span> to confirm transactions and state changes.</li>
-      <li>Refresh/reconnect the wallet; UI caching is common.</li>
+      <li>Confirm correct account + Fantom network.</li>
+      <li>Check your address on <span class="inline-code">ftmscan.com</span>.</li>
+      <li>Reconnect wallet and refresh; UI caching is common.</li>
     </ul>
 
-    <h3>“I can’t claim/restake (transaction fails)”</h3>
+    <h3>“Claim/restake fails”</h3>
     <ul>
-      <li>Ensure you have enough <strong>FTM</strong> for gas.</li>
-      <li>If RPC is flaky, switch to a reputable RPC endpoint (avoid random lists).</li>
-      <li>Verify failure reason on explorer (revert messages when available).</li>
+      <li>Ensure you have enough <strong>FTM</strong> gas.</li>
+      <li>Try another reputable RPC if your wallet supports it.</li>
+      <li>Check explorer for failure reason.</li>
     </ul>
 
     <h3>“Unstake/unlock is confusing”</h3>
     <ul>
-      <li>Read the staking UI’s unlock steps carefully (it’s usually multi-step).</li>
-      <li>Track the unstake transaction on explorer to confirm it was submitted.</li>
-      <li>Don’t repeat actions blindly if the UI is slow—verify first.</li>
+      <li>Expect multi-step exit. Read each step before clicking.</li>
+      <li>Verify each exit transaction on explorer.</li>
+      <li>Do not repeat actions blindly if UI is slow.</li>
     </ul>
 
     <div class="note">
-      <strong>Golden rule:</strong> don’t trust “0” balances in UI without checking the explorer.
+      <strong>Golden rule:</strong> if explorer shows your tx succeeded, your funds are not “gone”. Fix visibility/state first.
     </div>
   </section>
 
   <section class="sources" id="sources" aria-labelledby="sources-title">
     <h2 id="sources-title">Authoritative Sources & References</h2>
-    <p>High-quality references for Fantom staking context, validator insights, and security hygiene.</p>
+    <p>Reputable, topic-relevant references for Fantom staking context, verification, and security.</p>
 
-    <h3>FTM market context (sanity checks)</h3>
+    <h3>FTM market context</h3>
     <ul>
       <li><a href="https://coinmarketcap.com/currencies/fantom/" target="_blank" rel="noopener nofollow">CoinMarketCap — Fantom (FTM)</a></li>
       <li><a href="https://www.coingecko.com/en/coins/fantom" target="_blank" rel="noopener nofollow">CoinGecko — Fantom (FTM)</a></li>
+      <li><a href="https://messari.io/asset/fantom" target="_blank" rel="noopener nofollow">Messari — Fantom research</a></li>
     </ul>
 
-    <h3>Network & on-chain verification</h3>
+    <h3>On-chain verification</h3>
     <ul>
       <li><a href="https://ftmscan.com/" target="_blank" rel="noopener nofollow">FTMScan — Fantom explorer</a></li>
       <li><a href="https://chainlist.org/chain/250" target="_blank" rel="noopener nofollow">Chainlist — Fantom Opera (Chain ID 250)</a></li>
     </ul>
 
-    <h3>Staking / validator reference dashboards</h3>
+    <h3>Staking references</h3>
     <ul>
-      <li><a href="https://www.stakingrewards.com/asset/fantom/" target="_blank" rel="noopener nofollow">StakingRewards — Fantom staking overview</a></li>
-      <li><a href="https://messari.io/asset/fantom" target="_blank" rel="noopener nofollow">Messari — Fantom asset research</a></li>
+      <li><a href="https://www.stakingrewards.com/" target="_blank" rel="noopener nofollow">StakingRewards — staking data and mechanics</a></li>
+      <li><a href="https://www.coinbase.com/learn/crypto-basics/what-is-staking" target="_blank" rel="noopener nofollow">Coinbase Learn — what staking is (general)</a></li>
     </ul>
 
     <h3>Security hygiene</h3>
     <ul>
       <li><a href="https://revoke.cash/" target="_blank" rel="noopener nofollow">Revoke.cash — revoke token approvals</a></li>
-      <li><a href="https://owasp.org/www-project-top-10/" target="_blank" rel="noopener nofollow">OWASP Top 10 — security mindset (phishing/risks)</a></li>
+      <li><a href="https://support.metamask.io/" target="_blank" rel="noopener nofollow">MetaMask Support — account safety and scam patterns</a></li>
     </ul>
 
     <div class="note">
-      <strong>Tip:</strong> use explorer + reputable dashboards to cross-check what a staking UI claims.
+      <strong>Tip:</strong> for “is this real?”, trust explorers + reputable research sites, not random lists.
     </div>
   </section>
 
   <section class="card faq-section" aria-labelledby="faq">
-    <h2 id="faq">Fantom Staking FAQ: The Most Asked Questions (2026)</h2>
+    <h2 id="faq">Fantom Staking FAQ (2026)</h2>
 
     <div class="faq-item">
       <button class="faq-button" aria-expanded="false" aria-controls="f1" id="b1">
-        <h3>What is Fantom staking?</h3><span class="faq-plus">+</span>
+        <h3>How do I stake FTM on Fantom?</h3><span class="faq-plus">+</span>
       </button>
       <div id="f1" class="faq-content" role="region" aria-labelledby="b1">
-        <p><strong>Fantom staking</strong> generally means delegating FTM to a validator to earn rewards. Your outcomes depend on validator performance, fees, and lock/unlock rules.</p>
+        <p>Pick a reliable validator, delegate a small test amount, verify on-chain, then scale. Keep FTM for gas to claim/restake/unstake.</p>
       </div>
     </div>
 
     <div class="faq-item">
       <button class="faq-button" aria-expanded="false" aria-controls="f2" id="b2">
-        <h3>Do I need FTM for gas when staking?</h3><span class="faq-plus">+</span>
+        <h3>What affects Fantom staking rewards?</h3><span class="faq-plus">+</span>
       </button>
       <div id="f2" class="faq-content" role="region" aria-labelledby="b2">
-        <p>Yes. Staking actions are transactions. Keep a buffer of <strong>FTM</strong> for delegate/claim/restake/unstake steps and troubleshooting.</p>
+        <p>Validator performance and commission, plus your claim cadence and gas costs. Net outcomes matter more than displayed APR.</p>
       </div>
     </div>
 
     <div class="faq-item">
       <button class="faq-button" aria-expanded="false" aria-controls="f3" id="b3">
-        <h3>How do I choose a validator?</h3><span class="faq-plus">+</span>
+        <h3>Do I need FTM gas to stake and claim?</h3><span class="faq-plus">+</span>
       </button>
       <div id="f3" class="faq-content" role="region" aria-labelledby="b3">
-        <p>Prioritize reliability (uptime, reputation, transparency) and reasonable fees. Don’t pick solely by the highest displayed APR.</p>
+        <p>Yes. Staking actions are transactions on Fantom. Keep a gas buffer so you can claim, restake, or exit without getting stuck.</p>
       </div>
     </div>
 
     <div class="faq-item">
       <button class="faq-button" aria-expanded="false" aria-controls="f4" id="b4">
-        <h3>Why don’t my rewards show immediately?</h3><span class="faq-plus">+</span>
+        <h3>Why don’t my rewards show in the wallet?</h3><span class="faq-plus">+</span>
       </button>
       <div id="f4" class="faq-content" role="region" aria-labelledby="b4">
-        <p>Wallet UIs can lag or cache. Verify your staking transactions and state on the explorer, then refresh/reconnect the wallet UI.</p>
+        <p>UI caching is common. Verify your address on the explorer, then refresh/reconnect the wallet UI.</p>
       </div>
     </div>
 
     <div class="faq-item">
       <button class="faq-button" aria-expanded="false" aria-controls="f5" id="b5">
-        <h3>What’s the safest way to start staking?</h3><span class="faq-plus">+</span>
+        <h3>What is the safest way to start Fantom staking?</h3><span class="faq-plus">+</span>
       </button>
       <div id="f5" class="faq-content" role="region" aria-labelledby="b5">
-        <p>Start with a small test stake, verify on explorer, confirm validator behavior, then scale gradually. Keep gas buffers and avoid unknown links.</p>
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-button" aria-expanded="false" aria-controls="f6" id="b6">
-        <h3>Can I revoke approvals related to staking?</h3><span class="faq-plus">+</span>
-      </button>
-      <div id="f6" class="faq-content" role="region" aria-labelledby="b6">
-        <p>Yes. Use an allowance tool (like Revoke.cash) to review and revoke approvals you no longer need—especially after using new dApps.</p>
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-button" aria-expanded="false" aria-controls="f7" id="b7">
-        <h3>Why does unstaking/unlocking take multiple steps?</h3><span class="faq-plus">+</span>
-      </button>
-      <div id="f7" class="faq-content" role="region" aria-labelledby="b7">
-        <p>Many staking systems use multi-step exits with timing constraints. Always read the UI’s unlock steps and verify each step on explorer.</p>
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-button" aria-expanded="false" aria-controls="f8" id="b8">
-        <h3>What’s the biggest staking risk for most users?</h3><span class="faq-plus">+</span>
-      </button>
-      <div id="f8" class="faq-content" role="region" aria-labelledby="b8">
-        <p>Phishing and interacting with fake staking sites/contracts. Bookmark trusted pages, verify domains, and avoid broad approvals.</p>
+        <p>Stake a small test amount first, verify on-chain, choose reliable validators, and avoid unknown staking links and broad approvals.</p>
       </div>
     </div>
 
@@ -760,20 +701,17 @@
 </footer>
 
 <script>
-  // Accessible FAQ accordion
   (function(){
     const items = document.querySelectorAll('.faq-item');
     items.forEach((item) => {
       const btn = item.querySelector('.faq-button');
       const panel = item.querySelector('.faq-content');
       const plus = item.querySelector('.faq-plus');
-
       if(!btn || !panel) return;
 
       btn.addEventListener('click', () => {
         const isOpen = btn.getAttribute('aria-expanded') === 'true';
 
-        // close all
         items.forEach((it) => {
           const b = it.querySelector('.faq-button');
           const p = it.querySelector('.faq-content');
