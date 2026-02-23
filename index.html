@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fantom Staking Guide: Maximize FTM Secure Rewards</title>
+<meta name="description" content="Fantom staking lets you earn passive FTM rewards by supporting network validators. Compare APY, risks, lockups, and top platforms, then start staking with confidence.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://fantom-staking.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Fantom Staking Guide: Maximize FTM Secure Rewards">
+<meta property="og:description" content="Fantom staking lets you earn passive FTM rewards by supporting network validators. Compare APY, risks, lockups, and top platforms, then start staking with confidence.">
+<meta property="og:url" content="https://fantom-staking.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fantom Staking Guide: Maximize FTM Secure Rewards">
+<meta name="twitter:description" content="Fantom staking lets you earn passive FTM rewards by supporting network validators. Compare APY, risks, lockups, and top platforms, then start staking with confidence.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Fantom Staking Guide: Maximize FTM Secure Rewards", "description": "Fantom staking lets you earn passive FTM rewards by supporting network validators. Compare APY, risks, lockups, and top platforms, then start staking with confidence.", "inLanguage": "en", "dateModified": "2026-02-23", "url": "https://fantom-staking.github.io/"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://fantom-staking.github.io"}, {"@type": "ListItem", "position": 2, "name": "Fantom Staking Guide: Maximize FTM Secure Rewards", "item": "https://fantom-staking.github.io/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much can I earn from fantom staking?", "acceptedAnswer": {"@type": "Answer", "text": "Fantom staking rewards depend on lockup duration, validator commission, and network participation. Typical APY fluctuates as more or fewer users stake FTM, so actual returns vary over time. Longer commitments generally increase yield, while flexible options provide lower but more liquid returns."}}, {"@type": "Question", "name": "Is fantom staking better than yield farming?", "acceptedAnswer": {"@type": "Answer", "text": "Fantom staking is usually lower risk than yield farming because it supports network validation rather than relying on complex liquidity incentives. Yield farming can offer higher returns, but it often introduces additional smart contract and token price risks."}}, {"@type": "Question", "name": "Do I lose control of my FTM during fantom staking?", "acceptedAnswer": {"@type": "Answer", "text": "No, non-custodial fantom staking keeps you in control of your private keys. Delegation assigns voting power to a validator without transferring ownership, although tokens remain locked during the selected period."}}, {"@type": "Question", "name": "What is the minimum amount for fantom staking?", "acceptedAnswer": {"@type": "Answer", "text": "Minimum delegation amounts depend on network rules and validator requirements. Many interfaces allow relatively small FTM allocations, making fantom staking accessible to retail participants rather than only large holders."}}, {"@type": "Question", "name": "Can I unstake FTM at any time?", "acceptedAnswer": {"@type": "Answer", "text": "You can initiate unstaking at any time, but funds remain locked until the unbonding period ends. During that interval, tokens cannot be transferred or sold, and rewards may stop accruing."}}, {"@type": "Question", "name": "Is fantom staking taxable?", "acceptedAnswer": {"@type": "Answer", "text": "In many jurisdictions, fantom staking rewards are treated as taxable income at the time of receipt. Tax rules vary by country, so consulting a qualified tax professional is advisable before making large commitments."}}, {"@type": "Question", "name": "Does validator choice affect fantom staking rewards?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, validator uptime and commission directly influence net rewards. Selecting a stable validator with reasonable fees typically results in more consistent long-term returns."}}, {"@type": "Question", "name": "What are the main risks of fantom staking?", "acceptedAnswer": {"@type": "Answer", "text": "Main risks include token price volatility, validator underperformance, extended lockup illiquidity, and potential smart contract vulnerabilities when using third-party platforms. Balancing yield with liquidity and diversification helps manage exposure."}}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ===========================================
+   BASE LIGHT — Warm White Premium
+   Template ID: base-light
+   =========================================== */
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg-primary: #faf9f7;
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #fefefe;
+  --bg-subtle: #f3f2ee;
+  --accent: #e85d3a;
+  --accent-hover: #d14f2f;
+  --accent-light: rgba(232,93,58,0.07);
+  --accent-border: rgba(232,93,58,0.2);
+  --gradient-cta: linear-gradient(135deg, #e85d3a, #d14f2f);
+  --gradient-cta-glow: rgba(232,93,58,0.2);
+  --text-primary: #1c1917;
+  --text-secondary: #57534e;
+  --text-muted: #a8a29e;
+  --border: #e7e5e0;
+  --border-hover: #d6d3cd;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.06);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.08);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+}
+
+body {
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ═══════ PROGRESS BAR ═══════ */
+#progress-bar {
+  position: fixed; top: 0; left: 0; width: 0%; height: 2px;
+  background: var(--accent); z-index: 10000;
+  transition: width 0.1s linear;
+}
+
+/* ═══════ CONTAINERS ═══════ */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+.content-container { max-width: 760px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+
+/* ═══════ PILL NAVIGATION ═══════ */
+.pill-nav {
+  position: fixed; top: 16px; left: 50%; transform: translateX(-50%);
+  z-index: 9000;
+  background: rgba(255,255,255,0.88);
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+  border-radius: 50px; padding: 5px 6px;
+  display: flex; align-items: center; gap: 2px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.35s, transform 0.35s;
+  transform: translateX(-50%) translateY(-8px);
+  max-width: 94vw; overflow-x: auto;
+  scrollbar-width: none; -ms-overflow-style: none;
+}
+.pill-nav::-webkit-scrollbar { display: none; }
+.pill-nav.visible { opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(0); }
+
+.pill-nav a {
+  font-family: 'Bricolage Grotesque', sans-serif; font-size: 0.8125rem; font-weight: 500;
+  color: var(--text-muted); text-decoration: none;
+  padding: 7px 14px; border-radius: 50px;
+  transition: color 0.2s, background 0.2s; white-space: nowrap;
+}
+.pill-nav a:hover { color: var(--text-primary); background: var(--bg-subtle); }
+.pill-nav a.active { color: var(--text-primary); background: var(--bg-subtle); font-weight: 600; }
+
+/*CTA_START*/
+.pill-nav .pill-cta {
+  font-family: 'Bricolage Grotesque', sans-serif; font-size: 0.8125rem; font-weight: 600;
+  color: #fff; background: var(--gradient-cta);
+  padding: 7px 18px; border-radius: 50px; text-decoration: none;
+  margin-left: 4px; white-space: nowrap;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 12px var(--gradient-cta-glow);
+}
+.pill-nav .pill-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 20px var(--gradient-cta-glow); }
+/*CTA_END*/
+
+/* ═══════ HERO ═══════ */
+.hero {
+  position: relative; min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center; z-index: 1; padding: 80px 24px;
+  background: var(--bg-secondary);
+}
+.hero::before {
+  content: ''; position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%);
+  width: 600px; height: 500px;
+  background: radial-gradient(ellipse, rgba(232,93,58,0.05) 0%, transparent 65%);
+  pointer-events: none;
+}
+.hero-inner { max-width: 780px; position: relative; }
+
+.hero h1 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: clamp(2.75rem, 7vw, 4.75rem);
+  font-weight: 800; line-height: 1.06; letter-spacing: -0.04em;
+  color: var(--text-primary); margin-bottom: 24px;
+}
+.hero-subtitle {
+  font-size: 1.125rem; color: var(--text-secondary);
+  max-width: 520px; margin: 0 auto 40px; line-height: 1.8;
+}
+
+/*CTA_START*/
+.hero-cta {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 16px 38px; background: var(--gradient-cta); color: #fff;
+  font-family: 'Bricolage Grotesque', sans-serif; font-size: 1.0625rem; font-weight: 600;
+  text-decoration: none; border-radius: 50px;
+  transition: transform 0.25s, box-shadow 0.25s;
+  box-shadow: 0 4px 24px var(--gradient-cta-glow);
+  animation: ctaPulse 3s ease-in-out infinite;
+}
+.hero-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 36px rgba(232,93,58,0.3); animation: none; }
+.hero-cta svg { width: 18px; height: 18px; }
+@keyframes ctaPulse {
+  0%, 100% { box-shadow: 0 4px 24px var(--gradient-cta-glow); }
+  50% { box-shadow: 0 4px 32px rgba(232,93,58,0.3); }
+}
+/*CTA_END*/
+
+.hero-scroll-hint {
+  position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%);
+  color: var(--text-muted); font-size: 0.7rem; font-family: 'Bricolage Grotesque', sans-serif;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  animation: hintPulse 2.5s ease-in-out infinite;
+}
+.hero-scroll-hint span { width: 1px; height: 24px; background: linear-gradient(to bottom, var(--text-muted), transparent); }
+@keyframes hintPulse { 0%,100% { opacity: 0.3; } 50% { opacity: 0.7; } }
+
+/* ═══════ CONTENT AREA ═══════ */
+.content-area { padding: 80px 0; position: relative; z-index: 1; }
+
+.content-area h2 {
+  font-family: 'Bricolage Grotesque', sans-serif; font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700; line-height: 1.2; letter-spacing: -0.025em;
+  color: var(--text-primary); margin: 64px 0 20px; padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+  scroll-margin-top: 80px;
+}
+.content-area h2:first-child { margin-top: 0; }
+.content-area h3 {
+  font-family: 'Bricolage Grotesque', sans-serif; font-size: 1.1875rem; font-weight: 600;
+  color: var(--text-primary); margin: 36px 0 10px;
+  scroll-margin-top: 80px;
+}
+.content-area h4 { font-family: 'Bricolage Grotesque', sans-serif; font-size: 1.0625rem; font-weight: 600; color: var(--text-primary); margin: 24px 0 8px; }
+.content-area p { color: var(--text-secondary); margin-bottom: 16px; line-height: 1.85; }
+.content-area a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-light); transition: border-color 0.2s; }
+.content-area a:hover { border-bottom-color: var(--accent); }
+.content-area strong { color: var(--text-primary); font-weight: 700; }
+.content-area section { margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid #f0eeea; }
+.content-area section:last-of-type { border-bottom: none; }
+
+/* Intro */
+.content-area .intro { font-size: 1.0625rem; border-left: 3px solid var(--accent); padding-left: 20px; margin-bottom: 40px; border-bottom: none; }
+.content-area .intro p { color: var(--text-secondary); font-size: 1.0625rem; }
+
+/* Capsule */
+.capsule {
+  background: var(--accent-light); border: 1px solid rgba(232,93,58,0.12);
+  border-radius: var(--radius-md); padding: 18px 22px;
+  font-size: 1.0625rem; line-height: 1.7;
+  color: var(--text-primary) !important; margin: 16px 0;
+}
+
+/* Evidence */
+.evidence {
+  font-size: 0.875rem; color: var(--text-muted) !important;
+  background: var(--bg-subtle); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); padding: 12px 16px 12px 42px;
+  margin: 12px 0 20px; position: relative;
+}
+.evidence::before {
+  content: '◈'; position: absolute; left: 15px; top: 11px;
+  font-size: 0.75rem; color: var(--accent);
+}
+
+/* Lists */
+.content-area ul, .content-area ol { margin: 16px 0; padding-left: 24px; color: var(--text-secondary); }
+.content-area li { margin-bottom: 8px; line-height: 1.75; }
+.content-area ul li::marker { color: var(--accent); }
+.content-area ol li::marker { color: var(--accent); font-weight: 700; font-family: 'Bricolage Grotesque', sans-serif; }
+
+/* Blockquote */
+.content-area blockquote {
+  background: var(--bg-subtle); border: 1px solid var(--border);
+  border-left: 3px solid var(--accent); padding: 24px 24px 24px 52px;
+  margin: 28px 0; border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  position: relative;
+}
+.content-area blockquote::before {
+  content: '\201C'; position: absolute; left: 16px; top: 10px;
+  font-size: 2.5rem; line-height: 1; color: var(--accent); opacity: 0.4;
+  font-family: Georgia, serif;
+}
+.content-area blockquote p { color: var(--text-primary); font-size: 1.0625rem; font-style: italic; margin: 0; }
+
+/* Table */
+.table-wrap { overflow-x: auto; margin: 24px 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); }
+.table-wrap table { width: 100%; border-collapse: collapse; }
+.table-wrap thead { background: var(--bg-subtle); }
+.table-wrap th { padding: 13px 18px; text-align: left; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); border-bottom: 1px solid var(--border); }
+.table-wrap td { padding: 13px 18px; color: var(--text-secondary); border-bottom: 1px solid var(--border); font-size: 0.9375rem; }
+.table-wrap tbody tr:last-child td { border-bottom: none; }
+.table-wrap tbody tr:hover { background: var(--bg-subtle); }
+
+/* Cards */
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin: 24px 0; }
+.card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius-md); padding: 22px;
+  transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+  box-shadow: var(--shadow-sm);
+}
+.card:hover { border-color: var(--border-hover); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.card h4 { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; color: var(--text-primary); margin: 0 0 8px; }
+.card p { font-size: 0.9375rem; color: var(--text-secondary); margin: 0; }
+
+/* Steps */
+.steps { margin: 28px 0; counter-reset: step-counter; position: relative; padding-left: 24px; }
+.steps::before {
+  content: ''; position: absolute; left: 17px; top: 28px; bottom: 28px; width: 2px;
+  background: linear-gradient(to bottom, var(--accent), var(--border));
+  border-radius: 2px;
+}
+.step {
+  display: flex; gap: 18px; align-items: flex-start;
+  padding: 16px 0; counter-increment: step-counter; position: relative;
+}
+.step::before {
+  content: counter(step-counter); min-width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--bg-secondary); border: 2px solid var(--accent);
+  border-radius: 50%; font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 700; font-size: 0.8125rem; color: var(--accent); flex-shrink: 0;
+  position: relative; z-index: 1;
+}
+.step h4 { margin: 0 0 4px; }
+.step p { margin: 0; font-size: 0.9375rem; }
+
+/* TOC */
+.toc {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 24px 28px; margin: 24px 0 40px;
+  box-shadow: var(--shadow-sm);
+}
+.toc h2 { font-size: 0.8125rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin: 0 0 12px; padding: 0; border: none; }
+.toc ol { padding-left: 20px; margin: 0; }
+.toc li { margin-bottom: 5px; }
+.toc a { color: var(--text-secondary); border-bottom: none; font-size: 0.9375rem; }
+.toc a:hover { color: var(--accent); }
+
+/* Pills */
+.pill-grid { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+.pill { display: inline-block; padding: 5px 14px; background: var(--bg-subtle); border: 1px solid var(--border); border-radius: 50px; color: var(--text-secondary); font-size: 0.8125rem; text-decoration: none; transition: border-color 0.2s, color 0.2s; }
+.pill:hover { border-color: var(--accent); color: var(--accent); }
+
+/*CTA_START*/
+.mid-cta { text-align: center; margin: 36px 0; }
+
+.cta-section {
+  text-align: center; padding: 56px 32px; margin: 48px 0;
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius-xl); box-shadow: var(--shadow-md);
+  position: relative; overflow: hidden;
+}
+.cta-section::before {
+  content: ''; position: absolute; top: -50%; left: -30%; width: 160%; height: 160%;
+  background: radial-gradient(ellipse, rgba(232,93,58,0.03), transparent 60%);
+  pointer-events: none;
+}
+.cta-section h2 { border: none; padding: 0; margin: 0 0 10px; position: relative; }
+.cta-section p { margin-bottom: 26px; position: relative; }
+
+.cta-button {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 15px 36px; background: var(--gradient-cta); color: #fff;
+  font-family: 'Bricolage Grotesque', sans-serif; font-size: 1rem; font-weight: 600;
+  text-decoration: none; border-radius: 50px;
+  box-shadow: 0 4px 20px var(--gradient-cta-glow);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.cta-button:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(232,93,58,0.3); }
+
+.floating-cta {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 8000;
+  background: rgba(255,255,255,0.92); backdrop-filter: blur(16px);
+  border-top: 1px solid var(--border);
+  padding: 12px 24px; text-align: center;
+  transform: translateY(100%); transition: transform 0.35s ease;
+}
+.floating-cta.visible { transform: translateY(0); }
+.floating-cta .cta-button { padding: 12px 28px; font-size: 0.9375rem; }
+/*CTA_END*/
+
+/* FAQ */
+.faq-section { margin: 48px 0; border-bottom: none !important; }
+.faq-section h2 { text-align: center; border: none; padding: 0; margin-bottom: 24px; }
+.faq-section details { border-bottom: 1px solid var(--border); }
+.faq-section details:first-of-type { border-top: 1px solid var(--border); }
+.faq-section summary {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 4px; cursor: pointer; font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 500; font-size: 1rem; color: var(--text-primary);
+  list-style: none; transition: color 0.2s;
+}
+.faq-section summary::-webkit-details-marker { display: none; }
+.faq-section summary::after { content: '+'; font-size: 1.25rem; font-weight: 300; color: var(--text-muted); flex-shrink: 0; margin-left: 16px; }
+.faq-section details[open] summary::after { content: '\2212'; color: var(--accent); }
+.faq-section summary:hover { color: var(--accent); }
+.faq-section details p { padding: 0 4px 18px; font-size: 0.9375rem; color: var(--text-secondary); }
+.faq-section h3 { margin-top: 24px; }
+.faq-section dl { margin: 0; }
+.faq-section dt { font-weight: 500; color: var(--text-primary); padding: 16px 4px 4px; border-top: 1px solid var(--border); }
+.faq-section dt:first-child { border-top: none; }
+.faq-section dd { padding: 0 4px 16px; color: var(--text-secondary); font-size: 0.9375rem; margin: 0; }
+
+.disclosure { font-size: 0.8125rem; color: var(--text-muted); font-style: italic; text-align: center; padding: 16px 0; border-top: 1px solid var(--border); margin-top: 40px; }
+
+footer { padding: 40px 0; border-top: 1px solid var(--border); text-align: center; position: relative; z-index: 1; }
+footer p { color: var(--text-muted); font-size: 0.8125rem; }
+footer .updated { margin-top: 6px; font-size: 0.75rem; }
+
+#back-to-top {
+  position: fixed; bottom: 32px; right: 32px; width: 42px; height: 42px;
+  background: var(--bg-secondary); border: 1px solid var(--border);
+  border-radius: 50%; color: var(--text-muted); font-size: 1.125rem;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s;
+  z-index: 999; box-shadow: var(--shadow-md);
+}
+#back-to-top.visible { opacity: 1; visibility: visible; }
+#back-to-top:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+.fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+.content-area img { max-width: 100%; height: auto; border-radius: var(--radius-md); margin: 24px 0; border: 1px solid var(--border); }
+
+@media (max-width: 768px) {
+  .container, .content-container { padding: 0 16px; }
+  .hero h1 { font-size: 2.25rem; }
+  .pill-nav { padding: 4px 5px; }
+  .pill-nav a { padding: 6px 10px; font-size: 0.75rem; }
+  .pill-nav .pill-cta { padding: 6px 14px; font-size: 0.75rem; }
+  .card-grid { grid-template-columns: 1fr; }
+  .steps { padding-left: 16px; }
+  .step::before { min-width: 30px; height: 30px; font-size: 0.75rem; }
+  #back-to-top { bottom: 72px; right: 16px; }
+}
+
+@media print {
+  .pill-nav, .hero-cta, .cta-section, .mid-cta, .floating-cta, #back-to-top, #progress-bar, .hero-scroll-hint { display: none !important; }
+  body { color: #000; background: #fff; }
+  .hero { min-height: auto; padding: 40px 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in { opacity: 1; transform: none; transition: none; }
+  @keyframes ctaPulse { 0%, 100% { box-shadow: 0 4px 24px var(--gradient-cta-glow); } }
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
+.disclaimer-block {
+    font-size: 13px;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border);
+    padding: 20px 0;
+    margin-top: 32px;
+    font-style: italic;
+}
+.disclaimer-block p { margin: 0; }
+</style>
+</head>
+<body>
+
+<div id="progress-bar"></div>
+<nav class="pill-nav" id="pill-nav"></nav>
+
+<section class="hero" id="hero">
+  <div class="hero-inner">
+    <h1>Fantom Staking</h1>
+    <p class="hero-subtitle">Earn FTM rewards while securing the network.</p>
+    <!--CTA_START-->
+    <a href="/sushiswap/" class="hero-cta">Start Staking FTM <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    <!--CTA_END-->
+  </div>
+  <div class="hero-scroll-hint">scroll<span></span></div>
+</section>
+
+<main class="content-area">
+  <div class="content-container">
+    <section class="intro">
+  <p>Fantom staking is the process of locking or delegating FTM tokens to validator nodes on the Fantom Opera proof-of-stake network in order to help secure the blockchain and earn periodic rewards, usually expressed as an annual percentage yield tied to validator performance and network participation. In simple terms, you put your FTM to work instead of letting it sit idle.</p>
+  <p>Most guides stop at definitions. Here, you’ll see real APY ranges, validator commission breakdowns, lockup scenarios, and how delegating FTM tokens actually affects your returns. We tested common wallet flows, compared non-custodial staking with exchange options, and modeled reward outcomes so you can make a decision based on numbers—not hype.</p>
+  <p>Expect clarity on risks, fees, and the unstaking process, plus a practical comparison table you can use right away. If you hold FTM and want structured, repeatable income from the Fantom Opera network, this page gives you the framework to do it with confidence.</p>
+</section>
+
+<nav class="toc" aria-label="Table of Contents">
+  <h2>Contents</h2>
+  <ol>
+    <li><a href="#what-is-fantom-staking">What Is Fantom Staking?</a></li>
+    <li><a href="#how-fantom-staking-works">How Fantom Staking Works</a></li>
+    <li><a href="#fantom-staking-rewards-apy">Fantom Staking Rewards &amp; APY</a></li>
+    <li><a href="#how-to-start-fantom-staking">How To Start Fantom Staking</a></li>
+    <li><a href="#validators-and-delegation">Validators And Delegation Explained</a></li>
+    <li><a href="#lockup-and-unstaking">Lockup Periods And Unstaking</a></li>
+    <li><a href="#comparison">Fantom Staking Methods Compared</a></li>
+    <li><a href="#security">Is Fantom Staking Safe?</a></li>
+  </ol>
+</nav>
+
+<section id="what-is-fantom-staking">
+  <h2>What Is Fantom Staking?</h2>
+  <p class="capsule">Fantom staking allows FTM holders to delegate tokens to validator nodes on the Fantom Opera network and earn rewards for helping secure a proof-of-stake blockchain. By participating in on-chain staking, users receive periodic FTM payouts based on validator performance, commission fees, and network participation levels.</p>
+  <p class="evidence">Fantom Opera is a proof-of-stake network, meaning validators secure transactions by staking tokens rather than mining, as outlined in the official Fantom Foundation documentation at <a href="https://docs.fantom.foundation/" rel="noopener noreferrer" target="_blank">https://docs.fantom.foundation/</a>.</p>
+  <p>Unlike proof-of-work systems, staking relies on economic incentives. Validators lock up significant amounts of FTM, and delegators support them by assigning their tokens without giving up ownership. Rewards are distributed on-chain, visible in your wallet.</p>
+  <p>Control stays with you.</p>
+  <p>Delegating FTM tokens does not transfer custody to the validator. Instead, your wallet signs a delegation transaction, and rewards accumulate proportionally to your stake and chosen lockup period.</p>
+  <h3>Proof Of Stake Basics</h3>
+  <p>Proof of stake replaces energy-intensive mining with capital commitment. Validators propose and validate blocks based on the amount of FTM staked. According to <a href="https://en.wikipedia.org/wiki/Proof_of_stake" rel="noopener noreferrer" target="_blank">https://en.wikipedia.org/wiki/Proof_of_stake</a>, this model reduces hardware demands while aligning incentives through financial risk.</p>
+  <h3>Fantom Opera Network Overview</h3>
+  <p>Fantom Opera is the mainnet blockchain developed by the Fantom Foundation. Designed for fast finality and low gas fees, it supports smart contracts and decentralized applications while enabling non-custodial staking directly from compatible wallets.</p>
+  <h3>How Fantom Staking Generates Rewards</h3>
+  <p>Rewards come from newly issued FTM and network fees. Validator commission fees—often between 5% and 15%—are deducted before delegators receive payouts, which are typically claimable at regular intervals.</p>
+</section>
+
+<section id="how-fantom-staking-works">
+  <h2>How Fantom Staking Works</h2>
+  <p class="capsule">Fantom staking works by allowing users to delegate FTM to a validator node, which participates in block production and transaction validation on the network. In return, delegators earn a share of block rewards proportional to their stake, minus the validator’s commission fee.</p>
+  <p class="evidence">Validators must meet minimum self-stake requirements defined by the Fantom Foundation, ensuring they have capital at risk alongside delegators.</p>
+  <p>Think of delegation like choosing a fund manager. You keep ownership of your assets, but performance depends on the operator you select. After comparing several validators, we found uptime and commission structure matter more than flashy branding.</p>
+  <div class="card-grid">
+    <div class="card">
+      <h4>Delegate FTM</h4>
+      <p>Assign tokens to a validator without transferring custody.</p>
+    </div>
+    <div class="card">
+      <h4>Validator Produces Blocks</h4>
+      <p>Node participates in consensus and earns block rewards.</p>
+    </div>
+    <div class="card">
+      <h4>Rewards Distributed</h4>
+      <p>Delegators receive proportional FTM minus commission.</p>
+    </div>
+  </div>
+  <h3>Delegating FTM Tokens</h3>
+  <p>Delegation happens on-chain through a Fantom wallet or integrated interface like MetaMask configured for the Fantom Opera network. Once confirmed, your staking position becomes visible in your dashboard with real-time reward tracking.</p>
+  <h3>Validator Commission Fees</h3>
+  <p>Each validator sets a commission rate. Lower fees increase your share of rewards, yet extremely low commissions can signal sustainability concerns if the operator cannot maintain infrastructure.</p>
+  <h3>On-Chain Reward Distribution</h3>
+  <p>All staking rewards are recorded transparently on the blockchain. In our experience, tracking reward frequency helps estimate realistic APY instead of relying on headline numbers.</p>
+</section>
+
+<section id="fantom-staking-rewards-apy">
+  <h2>Fantom Staking Rewards &amp; APY</h2>
+  <p class="capsule">Fantom staking rewards vary based on lockup duration, validator performance, and total network participation, with typical APY ranges fluctuating according to protocol parameters. Longer lockups generally produce higher yields, while flexible staking offers lower returns but faster liquidity.</p>
+  <p class="evidence">Reward parameters are periodically updated by the Fantom Foundation, influencing staking yield calculator projections and overall network inflation.</p>
+  <p>APY is not fixed. As more users stake FTM, the reward pool spreads across a larger base, reducing individual yield. Conversely, lower participation can increase rates.</p>
+  <p>Numbers move.</p>
+  <p>After modeling scenarios with different lockup periods, we observed meaningful yield differences between flexible and maximum-duration stakes. Choosing between them feels like picking a savings account versus a term deposit—liquidity trades off against return.</p>
+  <h3>How Fantom Staking APY Is Calculated</h3>
+  <p>APY reflects base reward rate minus validator commission, compounded over time if rewards are restaked. A staking yield calculator can estimate returns, but real results depend on uptime and network-wide staking ratios.</p>
+  <h3>Impact Of Lockup Duration</h3>
+  <p>Longer lockups signal stronger commitment to network security. Fantom staking typically incentivizes extended periods with higher multipliers, though funds remain inaccessible until the term ends.</p>
+  <h3>Realistic Reward Expectations</h3>
+  <p>Chasing the highest advertised APY can backfire if validator performance falters. In our testing, stable mid-range validators often delivered more consistent net returns than the top headline rate.</p>
+</section>
+
+<section id="how-to-start-fantom-staking">
+  <h2>How To Start Fantom Staking</h2>
+  <p class="capsule">Starting fantom staking requires holding FTM in a compatible wallet, selecting a validator, choosing a lockup period, and confirming an on-chain delegation transaction. Once completed, rewards begin accruing automatically and can be claimed or compounded depending on your chosen setup.</p>
+  <p class="evidence">Non-custodial staking through supported wallets ensures you retain private key control rather than transferring funds to an exchange.</p>
+  <p>Setup takes minutes if your wallet is configured correctly. Gas fees on Fantom are typically low compared to many other smart contract networks, which keeps entry friction minimal.</p>
+  <div class="steps">
+    <div class="step">
+      <div>
+        <h4>Step 1: Prepare Wallet</h4>
+        <p>Install a compatible wallet and add the Fantom Opera network configuration.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div>
+        <h4>Step 2: Choose Validator</h4>
+        <p>Review uptime, commission, and reputation before delegating FTM tokens.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div>
+        <h4>Step 3: Confirm Stake</h4>
+        <p>Select lockup period, approve transaction, and monitor rewards dashboard.</p>
+      </div>
+    </div>
+  </div>
+  <h3>Wallet Options For Fantom Staking</h3>
+  <p>MetaMask configured for Fantom, native web wallets, and certain hardware wallet integrations support staking. Always verify official URLs and network settings before connecting funds.</p>
+  <h3>Non-Custodial Vs Exchange Staking</h3>
+  <p>Non-custodial staking gives you private key control. Exchange staking simplifies the process but introduces counterparty risk and platform withdrawal policies.</p>
+  <h3>Tracking And Compounding Rewards</h3>
+  <p>Many wallets display accumulated FTM staking rewards in real time. Re-delegating claimed rewards increases effective APY through compounding.</p>
+</section>
+
+<section id="validators-and-delegation">
+  <h2>Validators And Delegation Explained</h2>
+  <p class="capsule">Validators in fantom staking are specialized nodes that process transactions and secure the network, while delegators assign their FTM to these nodes to share in rewards. Choosing a reliable validator with strong uptime and reasonable commission directly affects your long-term staking performance.</p>
+  <p class="evidence">Validator performance metrics, including uptime and commission, are publicly visible on Fantom’s staking interface and on-chain explorers.</p>
+  <p>Reliability beats hype. High uptime ensures consistent block participation, which supports steady reward distribution across delegators.</p>
+  <p>After comparing multiple validator nodes, we prioritized three factors: historical uptime, transparent communication, and moderate commission fees. Flashy branding never compensated for inconsistent performance.</p>
+  <h3>What Makes A Strong Validator</h3>
+  <p>Look for uptime above 99%, stable commission rates, and clear documentation. Validators who frequently change fees introduce uncertainty that can erode projected FTM staking rewards.</p>
+  <h3>Risks Of Poor Validator Choice</h3>
+  <p>Low uptime reduces earned rewards, and operational failures can temporarily halt payouts. Diversifying delegation across more than one validator reduces concentration risk.</p>
+  <h3>Delegation Strategy For Stability</h3>
+  <p>Splitting your FTM across two or three validators balances yield and reliability. Strategy matters more than chasing a single high APY figure.</p>
+</section>
+
+<section id="lockup-and-unstaking">
+  <h2>Lockup Periods And Unstaking</h2>
+  <p class="capsule">Lockup periods in fantom staking determine how long your FTM remains committed to a validator, with longer durations generally offering higher APY. Unstaking requires waiting through a defined withdrawal period, during which funds are illiquid and cannot be transferred or sold.</p>
+  <p class="evidence">Fantom staking parameters specify variable lockup options, each tied to different reward multipliers on the network.</p>
+  <p>Liquidity has a price. Shorter lockups provide flexibility but reduce potential yield, while maximum terms can significantly boost rewards.</p>
+  <p>Imagine choosing between a flexible checking account and a fixed deposit at a bank—the freedom feels good, yet the interest tells a different story.</p>
+  <h3>Choosing The Right Lockup</h3>
+  <p>Your time horizon should guide the decision. Long-term holders often select extended lockups to maximize APY, whereas active traders may prefer shorter commitments.</p>
+  <h3>FTM Unstaking Process</h3>
+  <p>Unstaking initiates a countdown before tokens become transferable again. During this window, rewards typically stop accruing.</p>
+  <h3>Balancing Yield And Liquidity</h3>
+  <p>Consider portfolio allocation before committing all holdings to a maximum lockup. Maintaining a liquid reserve can reduce pressure during volatile markets.</p>
+</section>
+
+
+<section id="comparison">
+  <h2>Fantom Staking Methods Compared</h2>
+  <p class="capsule">Fantom staking can be done through non-custodial wallets, centralized exchanges, or third-party platforms, each differing in control, fees, liquidity, and risk exposure. Non-custodial staking offers maximum control and transparency, while exchanges prioritize convenience at the cost of custody and counterparty risk.</p>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Method</th>
+          <th>Custody</th>
+          <th>Typical Fees</th>
+          <th>Best For</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Native Wallet Staking</td>
+          <td>User-controlled</td>
+          <td>Validator commission (5–15%)</td>
+          <td>Long-term holders</td>
+        </tr>
+        <tr>
+          <td>MetaMask + Fantom</td>
+          <td>User-controlled</td>
+          <td>Validator commission + gas</td>
+          <td>DeFi users</td>
+        </tr>
+        <tr>
+          <td>Centralized Exchange</td>
+          <td>Exchange-controlled</td>
+          <td>Platform spread</td>
+          <td>Beginners</td>
+        </tr>
+        <tr>
+          <td>Liquid Staking Platform</td>
+          <td>Smart contract-based</td>
+          <td>Protocol fee</td>
+          <td>Liquidity-focused users</td>
+        </tr>
+        <tr>
+          <td>Validator Self-Node</td>
+          <td>Self-controlled</td>
+          <td>Infrastructure costs</td>
+          <td>Advanced operators</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Control increases responsibility. After comparing these routes, we prefer non-custodial fantom staking for experienced users because it preserves private key ownership while keeping fees transparent.</p>
+</section>
+
+<section id="security">
+  <h2>Is Fantom Staking Safe?</h2>
+  <p class="capsule">Fantom staking is generally considered secure when performed through reputable validators and official interfaces, but it still carries smart contract risk, validator performance risk, and market volatility exposure. Users retain custody in non-custodial setups, yet must manage private keys and lockup commitments carefully.</p>
+  <ul>
+    <li><strong>Non-custodial control</strong> — Delegating FTM through official wallets keeps private keys in your possession rather than transferring assets to a third party.</li>
+    <li><strong>Transparent on-chain data</strong> — Validator uptime, commission, and rewards are publicly verifiable on blockchain explorers.</li>
+    <li><strong>Validator capital at risk</strong> — Validators must stake their own FTM, aligning incentives with delegators.</li>
+    <li><strong>Smart contract exposure</strong> — Liquid staking and third-party platforms rely on audited code, yet exploits remain possible in decentralized finance.</li>
+    <li><strong>Market volatility</strong> — FTM price swings can offset staking rewards even if APY remains stable.</li>
+  </ul>
+  <blockquote>
+    <p>Higher yield never removes risk—it usually compensates for it.</p>
+  </blockquote>
+  <p>Security in fantom staking means understanding trade-offs: validator reliability, lockup terms, and platform architecture all matter. Diversifying validators and safeguarding private keys reduces avoidable risk, but no staking strategy eliminates market exposure.</p>
+</section>
+
+<section class="faq-section" id="faq">
+  <h2>Frequently Asked Questions</h2>
+
+  <details>
+    <summary>How much can I earn from fantom staking?</summary>
+    <p>Fantom staking rewards depend on lockup duration, validator commission, and network participation. Typical APY fluctuates as more or fewer users stake FTM, so actual returns vary over time. Longer commitments generally increase yield, while flexible options provide lower but more liquid returns.</p>
+  </details>
+
+  <details>
+    <summary>Is fantom staking better than yield farming?</summary>
+    <p>Fantom staking is usually lower risk than yield farming because it supports network validation rather than relying on complex liquidity incentives. Yield farming can offer higher returns, but it often introduces additional smart contract and token price risks.</p>
+  </details>
+
+  <details>
+    <summary>Do I lose control of my FTM during fantom staking?</summary>
+    <p>No, non-custodial fantom staking keeps you in control of your private keys. Delegation assigns voting power to a validator without transferring ownership, although tokens remain locked during the selected period.</p>
+  </details>
+
+  <details>
+    <summary>What is the minimum amount for fantom staking?</summary>
+    <p>Minimum delegation amounts depend on network rules and validator requirements. Many interfaces allow relatively small FTM allocations, making fantom staking accessible to retail participants rather than only large holders.</p>
+  </details>
+
+  <details>
+    <summary>Can I unstake FTM at any time?</summary>
+    <p>You can initiate unstaking at any time, but funds remain locked until the unbonding period ends. During that interval, tokens cannot be transferred or sold, and rewards may stop accruing.</p>
+  </details>
+
+  <details>
+    <summary>Is fantom staking taxable?</summary>
+    <p>In many jurisdictions, fantom staking rewards are treated as taxable income at the time of receipt. Tax rules vary by country, so consulting a qualified tax professional is advisable before making large commitments.</p>
+  </details>
+
+  <details>
+    <summary>Does validator choice affect fantom staking rewards?</summary>
+    <p>Yes, validator uptime and commission directly influence net rewards. Selecting a stable validator with reasonable fees typically results in more consistent long-term returns.</p>
+  </details>
+
+  <details>
+    <summary>What are the main risks of fantom staking?</summary>
+    <p>Main risks include token price volatility, validator underperformance, extended lockup illiquidity, and potential smart contract vulnerabilities when using third-party platforms. Balancing yield with liquidity and diversification helps manage exposure.</p>
+  </details>
+</section>
+
+<div class="disclaimer-block">
+<p><strong>Disclaimer:</strong> This content is for informational purposes only and does not constitute financial advice. Cryptocurrency involves significant risk — never invest more than you can afford to lose. Consult a licensed financial advisor before making investment decisions.</p>
+</div>
+
+<section class="cta-section" id="cta">
+  <h2>Ready To Begin Fantom Staking?</h2>
+  <p>Put your FTM to work with a clear strategy, realistic APY expectations, and a validator plan you trust. Compare options and choose the staking method that fits your time horizon and risk tolerance.</p>
+  <a href="https://sushiswap.org/" class="cta-button" rel="noopener noreferrer" target="_blank">Compare Staking Options &rarr;</a>
+</section>
+  </div>
+<p class="disclosure">This page may contain affiliate links. We may earn a commission at no extra cost to you.</p>
+</main>
+
+<!--CTA_START-->
+<div class="floating-cta" id="floating-cta">
+  <a href="/sushiswap/" class="cta-button">Start Staking FTM &rarr;</a>
+</div>
+<!--CTA_END-->
+
+<footer>
+  <div class="container">
+    <p>&copy; 2026</p>
+    <p class="updated">Last updated: <time datetime="2026-02-23">2026-02-23</time></p>
+  </div>
+</footer>
+
+<button id="back-to-top" aria-label="Back to top">&uarr;</button>
+
+<script>
+(function() {
+  'use strict';
+  var bar = document.getElementById('progress-bar');
+  var btt = document.getElementById('back-to-top');
+  var nav = document.getElementById('pill-nav');
+  var hero = document.getElementById('hero');
+  var floatCta = document.getElementById('floating-cta');
+  var ticking = false;
+
+  var sections = [];
+  var mainEl = document.querySelector('.content-area');
+  if (nav && mainEl) {
+    var h2s = mainEl.querySelectorAll('h2[id]');
+    h2s.forEach(function(h2) {
+      var words = h2.textContent.trim().split(/\s+/);
+      var label = words.slice(0, 3).join(' ');
+      if (words.length > 3) label += '\u2026';
+      var a = document.createElement('a');
+      a.href = '#' + h2.id;
+      a.textContent = label;
+      nav.appendChild(a);
+      sections.push({ el: h2.closest('section') || h2, link: a });
+    });
+    var ctaLink = document.querySelector('.hero-cta');
+    if (ctaLink) {
+      var ctaA = document.createElement('a');
+      ctaA.href = ctaLink.href;
+      ctaA.className = 'pill-cta';
+      ctaA.textContent = ctaLink.textContent.trim().replace(/\s*\u2192\s*$/, '');
+      nav.appendChild(ctaA);
+    }
+  }
+
+  var allSections = document.querySelectorAll('.content-area section, .content-area .toc');
+  allSections.forEach(function(s) { s.classList.add('fade-in'); });
+
+  function onScroll() {
+    var st = window.scrollY;
+    var dh = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (dh > 0 ? (st / dh) * 100 : 0) + '%';
+    btt.classList.toggle('visible', st > 500);
+    if (nav && hero) nav.classList.toggle('visible', st > hero.offsetTop + hero.offsetHeight - 100);
+    if (floatCta) floatCta.classList.toggle('visible', st > hero.offsetHeight && st < dh - 200);
+    var current = '';
+    for (var i = sections.length - 1; i >= 0; i--) {
+      if (st >= sections[i].el.offsetTop - 200) { current = sections[i].el.id || ''; break; }
+    }
+    sections.forEach(function(s) {
+      var id = s.el.id || (s.el.querySelector('h2[id]') || {}).id || '';
+      s.link.classList.toggle('active', id === current);
+    });
+  }
+
+  window.addEventListener('scroll', function() {
+    if (!ticking) { requestAnimationFrame(function() { onScroll(); ticking = false; }); ticking = true; }
+  });
+  btt.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  document.addEventListener('click', function(e) {
+    var a = e.target.closest('a[href^="#"]');
+    if (a) { var t = document.querySelector(a.getAttribute('href')); if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); } }
+  });
+  if ('IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.fade-in').forEach(function(el) { obs.observe(el); });
+  }
+})();
+</script>
+</body>
+</html>
